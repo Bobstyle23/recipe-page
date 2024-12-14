@@ -1,0 +1,27 @@
+/* NOTE: colors */
+/* NOTE: spacing */
+/* NOTE: font */
+/* NOTE: extends */
+/* NOTE: mixins  */
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Young Serif", "Outfit", sans-serif;
+  line-height: 1;
+  overflow-x: hidden;
+  text-align: center;
+  background-color: #f3e5d7;
+}
+
+/*# sourceMappingURL=main.css.map */

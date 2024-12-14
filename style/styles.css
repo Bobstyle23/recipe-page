@@ -1,0 +1,36 @@
+:root {
+  --rose-800: #7a284e;
+  --rose-50: #fff7fb;
+  --stone-900: #312e2c;
+  --stone-600: #5f564d;
+  --stone-150: #e3ddd7;
+  --stone-100: #f3e5d7;
+  --brown-800: #854632;
+  --white: #fff;
+
+  --font-family-young-serif: "Young Serif";
+
+  --font-size-preset-1: 4rem;
+  --font-weight-preset-1: 400;
+  --line-height-preset-1: 1;
+
+  --font-size-preset-2: 2.8rem;
+  --font-weight-preset-2: 400;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Young Serif", "Outfit", sans-serif;
+  line-height: 1;
+}

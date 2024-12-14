@@ -1,0 +1,103 @@
+/* NOTE: colors */
+$color-rose-800: #7a284e;
+$color-rose-50: #fff7fb;
+
+$color-stone-900: #312e2c;
+$color-stone-600: #5f564d;
+$color-stone-150: #e3ddd7;
+$color-stone-100: #f3e5d7;
+
+$color-brown-800: #854632;
+$color-white: #fff;
+
+/* NOTE: spacing */
+$spacing-1600: 12.8rem;
+$spacing-600: 4.8rem;
+$spacing-500: 4rem;
+$spacing-400: 3.2rem;
+$spacing-300: 2.4rem;
+$spacing-200: 1.6rem;
+$spacing-150: 1.2rem;
+$spacing-100: 0.8rem;
+
+/* NOTE: font */
+$font-size-xl: 4rem;
+$font-size-lg: 2.8rem;
+$font-size-md: 2rem;
+$font-size-sm: 1.6rem;
+$font-size-xs: 1.2rem;
+
+/* NOTE: extends */
+%font-young-serif {
+  font-family: "Young Serif";
+  font-weight: 400;
+}
+
+%font-outfit-semi-bold {
+  font-family: "Outfit";
+  font-weight: 600;
+}
+
+%font-outfit-regular {
+  font-family: "Outfit";
+  font-weight: 400;
+}
+
+%font-outfit-bold {
+  font-family: "Outfit";
+  font-weight: 700;
+}
+
+/* NOTE: mixins  */
+@mixin text-preset-1($color) {
+  font-size: $font-size-xl;
+  color: $color;
+  @extend %font-young-serif;
+}
+
+@mixin text-preset-2($color) {
+  font-size: $font-size-lg;
+  color: $color;
+  @extend %font-young-serif;
+}
+
+@mixin text-preset-3($color) {
+  font-size: $font-size-md;
+  color: $color;
+  @extend %font-outfit-semi-bold;
+}
+
+@mixin text-preset-4($color) {
+  font-size: $font-size-sm;
+  color: $color;
+  line-height: 1.5;
+  @extend %font-outfit-regular;
+}
+
+@mixin text-preset-bold($color) {
+  font-size: $font-size-sm;
+  color: $color;
+  line-height: 1.5;
+  @extend %font-outfit-bold;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Young Serif", "Outfit", sans-serif;
+  line-height: 1;
+  overflow-x: hidden;
+  text-align: center;
+  background-color: $color-stone-100;
+}
