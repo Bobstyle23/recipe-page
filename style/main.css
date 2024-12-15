@@ -117,16 +117,17 @@ body {
   margin-bottom: 2.4rem;
 }
 .ingredients__list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-  /* list-style-position: inside; */
+  margin-left: 1.6rem;
+  padding-left: 0.8rem;
 }
 .ingredients__list-item {
   font-size: 1.6rem;
   color: #5f564d;
   line-height: 1.5;
-  margin-left: 0.8rem;
+  padding-left: 0.8rem;
+}
+.ingredients__list-item:not(:last-child) {
+  margin-bottom: 0.8rem;
 }
 .ingredients__list-item::marker {
   color: #854632;
@@ -157,7 +158,8 @@ body {
   color: #5f564d;
   line-height: 1.5;
   padding-left: 1.6rem;
-  line-height: 1.5;
+}
+.instructions__steps-item:not(:last-child) {
   margin-bottom: 0.8rem;
 }
 .instructions__steps-item::marker {
@@ -214,6 +216,7 @@ body {
     max-width: 61.6rem;
   }
 }
+/* PERF: Mobiles */
 @media (max-width: 30em) {
   html {
     font-size: 50%;

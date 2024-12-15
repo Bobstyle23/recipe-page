@@ -177,14 +177,16 @@ body {
   }
 
   &__list {
-    display: flex;
-    flex-direction: column;
-    gap: $spacing-100;
-    /* list-style-position: inside; */
+    margin-left: $spacing-200;
+    padding-left: $spacing-100;
 
     &-item {
       @include text-preset-4($color-stone-600);
-      margin-left: $spacing-100;
+      padding-left: $spacing-100;
+
+      &:not(:last-child) {
+        margin-bottom: $spacing-100;
+      }
 
       &::marker {
         color: $color-brown-800;
@@ -219,8 +221,10 @@ body {
     &-item {
       @include text-preset-4($color-stone-600);
       padding-left: $spacing-200;
-      line-height: 1.5;
-      margin-bottom: $spacing-100;
+
+      &:not(:last-child) {
+        margin-bottom: $spacing-100;
+      }
 
       &::marker {
         @include text-preset-4-bold($color-brown-800);
@@ -282,6 +286,7 @@ body {
   }
 }
 
+/* PERF: Mobiles */
 @media (max-width: 30em) {
   html {
     font-size: 50%;
