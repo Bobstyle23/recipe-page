@@ -277,3 +277,41 @@ body {
     max-width: 61.6rem;
   }
 }
+
+@media (max-width: 30em) {
+  html {
+    font-size: 50%;
+  }
+
+  body {
+    padding: 0;
+  }
+
+  .main-container img:first-child {
+    background-color: red;
+  }
+
+  .main-container {
+    margin: 0;
+    border-radius: 0;
+    width: 100%;
+    padding: $spacing-500 $spacing-400;
+    position: relative;
+  }
+
+  .main-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    max-height: 20rem;
+    border-radius: 0;
+    object-fit: cover;
+  }
+
+  figcaption {
+    position: relative;
+    margin-top: calc(18rem);
+  }
+}
