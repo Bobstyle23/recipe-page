@@ -210,7 +210,7 @@ body {
   &__list {
     display: flex;
     flex-direction: column;
-    gap: $spacing-150;
+    gap: $spacing-100;
     list-style-position: inside;
 
     &--item {
@@ -224,6 +224,45 @@ body {
       span {
         @include text-preset-4-bold($color-stone-600);
         margin-left: $spacing-200;
+      }
+    }
+  }
+}
+
+/* NOTE: nutrition */
+
+.nutrition {
+  &__title {
+    margin-bottom: $spacing-300;
+    @include text-preset-2($color-brown-800);
+  }
+
+  &__info {
+    margin-bottom: $spacing-300;
+    @include text-preset-4($color-stone-600);
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+
+    &--row {
+      &:first-child td {
+        padding-top: 0;
+      }
+
+      td {
+        padding: $spacing-150 $spacing-400;
+        border-bottom: 1px solid $color-stone-150;
+
+        &:first-child {
+          @include text-preset-4($color-stone-600);
+          padding-right: $spacing-200;
+        }
+
+        &:not(:first-child) {
+          @include text-preset-4-bold($color-brown-800);
+        }
       }
     }
   }
