@@ -271,7 +271,7 @@ body {
 
         &:first-child {
           @include text-preset-4($color-stone-600);
-          padding-right: $spacing-200;
+          padding-right: $spacing-150;
         }
 
         &:not(:first-child) {
