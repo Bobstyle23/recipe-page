@@ -61,7 +61,7 @@ body {
   width: 100%;
   height: auto;
   border-radius: 1.2rem;
-  margin-bottom: 2.4rem;
+  margin-bottom: 4rem;
 }
 .header__title {
   font-size: 4rem;
@@ -117,7 +117,7 @@ body {
 .ingredients__list {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 0.8rem;
   list-style-position: inside;
 }
 .ingredients__list-item {
