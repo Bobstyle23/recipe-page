@@ -12,12 +12,12 @@
   font-weight: 600;
 }
 
-.nutrition__table--row td:first-child, .nutrition__info, .instructions__list--item, .ingredients__list--item, .preparation__list, .header__description {
+.nutrition__table-row td:first-child, .nutrition__info, .instructions__list-item, .ingredients__list-item, .preparation__list, .header__description {
   font-family: "Outfit";
   font-weight: 400;
 }
 
-.nutrition__table--row td:not(:first-child), .instructions__list--item span, .instructions__list--item::marker, .preparation__list--item span {
+.nutrition__table-row td:not(:first-child), .instructions__list-item span, .instructions__list-item::marker, .preparation__list-item span {
   font-family: "Outfit";
   font-weight: 700;
 }
@@ -94,13 +94,13 @@ body {
   color: #5f564d;
   line-height: 1.5;
 }
-.preparation__list--item {
+.preparation__list-item {
   margin-left: 0.8rem;
 }
-.preparation__list--item::marker {
+.preparation__list-item::marker {
   color: #7a284e;
 }
-.preparation__list--item span {
+.preparation__list-item span {
   font-size: 1.6rem;
   color: #5f564d;
   line-height: 1.5;
@@ -119,21 +119,23 @@ body {
   gap: 1.2rem;
   list-style-position: inside;
 }
-.ingredients__list--item {
+.ingredients__list-item {
   font-size: 1.6rem;
   color: #5f564d;
   line-height: 1.5;
   margin-left: 0.8rem;
 }
-.ingredients__list--item::marker {
+.ingredients__list-item::marker {
   color: #854632;
 }
-.ingredients__list--item span {
+.ingredients__list-item span {
   margin-left: 1.6rem;
 }
 
 .horizontal-line {
-  border-top: 1px solid #e3ddd7;
+  height: 0.1rem;
+  border: none;
+  background-color: #e3ddd7;
   margin: 3.2rem 0;
 }
 
@@ -149,18 +151,18 @@ body {
   gap: 0.8rem;
   list-style-position: inside;
 }
-.instructions__list--item {
+.instructions__list-item {
   font-size: 1.6rem;
   color: #5f564d;
   line-height: 1.5;
   margin-left: 0.8rem;
 }
-.instructions__list--item::marker {
+.instructions__list-item::marker {
   font-size: 1.6rem;
   color: #854632;
   line-height: 1.5;
 }
-.instructions__list--item span {
+.instructions__list-item span {
   font-size: 1.6rem;
   color: #5f564d;
   line-height: 1.5;
@@ -183,20 +185,20 @@ body {
   width: 100%;
   border-collapse: collapse;
 }
-.nutrition__table--row:first-child td {
+.nutrition__table-row:first-child td {
   padding-top: 0;
 }
-.nutrition__table--row td {
+.nutrition__table-row td {
   padding: 1.2rem 3.2rem;
   border-bottom: 1px solid #e3ddd7;
 }
-.nutrition__table--row td:first-child {
+.nutrition__table-row td:first-child {
   font-size: 1.6rem;
   color: #5f564d;
   line-height: 1.5;
   padding-right: 1.6rem;
 }
-.nutrition__table--row td:not(:first-child) {
+.nutrition__table-row td:not(:first-child) {
   font-size: 1.6rem;
   color: #854632;
   line-height: 1.5;

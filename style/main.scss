@@ -151,7 +151,7 @@ body {
     list-style-position: inside;
     @include text-preset-4($color-stone-600);
 
-    &--item {
+    &-item {
       margin-left: $spacing-100;
 
       &::marker {
@@ -179,7 +179,7 @@ body {
     gap: $spacing-150;
     list-style-position: inside;
 
-    &--item {
+    &-item {
       @include text-preset-4($color-stone-600);
       margin-left: $spacing-100;
 
@@ -195,7 +195,9 @@ body {
 }
 
 .horizontal-line {
-  border-top: 1px solid $color-stone-150;
+  height: 0.1rem;
+  border: none;
+  background-color: $color-stone-150;
   margin: $spacing-400 0;
 }
 
@@ -213,7 +215,7 @@ body {
     gap: $spacing-100;
     list-style-position: inside;
 
-    &--item {
+    &-item {
       @include text-preset-4($color-stone-600);
       margin-left: $spacing-100;
 
@@ -246,7 +248,7 @@ body {
     width: 100%;
     border-collapse: collapse;
 
-    &--row {
+    &-row {
       &:first-child td {
         padding-top: 0;
       }
