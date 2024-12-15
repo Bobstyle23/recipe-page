@@ -12,12 +12,12 @@
   font-weight: 600;
 }
 
-.nutrition__table-row td:first-child, .nutrition__info, .instructions__list-item, .ingredients__list-item, .preparation__list, .header__description {
+.nutrition__table-row td:first-child, .nutrition__info, .instructions__steps-item, .ingredients__list-item, .preparation__list, .header__description {
   font-family: "Outfit";
   font-weight: 400;
 }
 
-.nutrition__table-row td:not(:first-child), .instructions__list-item span, .instructions__list-item::marker, .preparation__list-item span {
+.nutrition__table-row td:not(:first-child), .instructions__steps-item--bold, .instructions__steps-item::marker, .preparation__list-item span {
   font-family: "Outfit";
   font-weight: 700;
 }
@@ -120,7 +120,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
-  list-style-position: inside;
+  /* list-style-position: inside; */
 }
 .ingredients__list-item {
   font-size: 1.6rem;
@@ -148,28 +148,27 @@ body {
   color: #854632;
   margin-bottom: 2.4rem;
 }
-.instructions__list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-  list-style-position: inside;
+.instructions__steps {
+  margin-left: 1.6rem;
+  padding-left: 0.8rem;
 }
-.instructions__list-item {
+.instructions__steps-item {
   font-size: 1.6rem;
   color: #5f564d;
   line-height: 1.5;
-  margin-left: 0.8rem;
+  padding-left: 1.6rem;
+  line-height: 1.5;
+  margin-bottom: 0.8rem;
 }
-.instructions__list-item::marker {
+.instructions__steps-item::marker {
   font-size: 1.6rem;
   color: #854632;
   line-height: 1.5;
 }
-.instructions__list-item span {
+.instructions__steps-item--bold {
   font-size: 1.6rem;
   color: #5f564d;
   line-height: 1.5;
-  margin-left: 1.6rem;
 }
 
 /* NOTE: nutrition */

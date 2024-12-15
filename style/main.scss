@@ -180,7 +180,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: $spacing-100;
-    list-style-position: inside;
+    /* list-style-position: inside; */
 
     &-item {
       @include text-preset-4($color-stone-600);
@@ -212,23 +212,22 @@ body {
     margin-bottom: $spacing-300;
   }
 
-  &__list {
-    display: flex;
-    flex-direction: column;
-    gap: $spacing-100;
-    list-style-position: inside;
+  &__steps {
+    margin-left: $spacing-200;
+    padding-left: $spacing-100;
 
     &-item {
       @include text-preset-4($color-stone-600);
-      margin-left: $spacing-100;
+      padding-left: $spacing-200;
+      line-height: 1.5;
+      margin-bottom: $spacing-100;
 
       &::marker {
         @include text-preset-4-bold($color-brown-800);
       }
 
-      span {
+      &--bold {
         @include text-preset-4-bold($color-stone-600);
-        margin-left: $spacing-200;
       }
     }
   }
