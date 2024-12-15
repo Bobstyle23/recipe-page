@@ -100,6 +100,8 @@ body {
 }
 .preparation__list-item::marker {
   color: #7a284e;
+  padding: 0;
+  margin: 0;
 }
 .preparation__list-item span {
   font-size: 1.6rem;
@@ -186,12 +188,14 @@ body {
   width: 100%;
   border-collapse: collapse;
 }
+.nutrition__table-row:not(:last-child) {
+  border-bottom: 1px solid #e3ddd7;
+}
 .nutrition__table-row:first-child td {
   padding-top: 0;
 }
 .nutrition__table-row td {
   padding: 1.2rem 3.2rem;
-  border-bottom: 1px solid #e3ddd7;
 }
 .nutrition__table-row td:first-child {
   font-size: 1.6rem;

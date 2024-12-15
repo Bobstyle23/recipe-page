@@ -157,6 +157,8 @@ body {
 
       &::marker {
         color: $color-rose-800;
+        padding: 0;
+        margin: 0;
       }
 
       span {
@@ -250,13 +252,16 @@ body {
     border-collapse: collapse;
 
     &-row {
+      &:not(:last-child) {
+        border-bottom: 1px solid $color-stone-150;
+      }
+
       &:first-child td {
         padding-top: 0;
       }
 
       td {
         padding: $spacing-150 $spacing-400;
-        border-bottom: 1px solid $color-stone-150;
 
         &:first-child {
           @include text-preset-4($color-stone-600);
