@@ -124,7 +124,6 @@ body {
   font-size: 1.6rem;
   color: #5f564d;
   line-height: 1.5;
-  padding-left: 0.8rem;
 }
 .ingredients__list-item:not(:last-child) {
   margin-bottom: 0.8rem;
@@ -194,6 +193,9 @@ body {
 }
 .nutrition__table-row:first-child td {
   padding-top: 0;
+}
+.nutrition__table-row:last-child td {
+  padding-bottom: 0;
 }
 .nutrition__table-row td {
   padding: 1.2rem 3.2rem;
