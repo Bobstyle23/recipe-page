@@ -99,6 +99,7 @@ body {
   line-height: 1;
   overflow-x: hidden;
   background-color: $color-stone-100;
+  padding: 0 $spacing-600;
 }
 
 .main-container {
@@ -267,5 +268,12 @@ body {
         }
       }
     }
+  }
+}
+
+/* PERF: Tablets portrait and landscape 768px ~ 1024px */
+@media (min-width: 48em) and (max-width: 64em) {
+  .main-container {
+    max-width: 61.6rem;
   }
 }
