@@ -2,6 +2,26 @@
 /* NOTE: spacing */
 /* NOTE: font */
 /* NOTE: extends */
+.instructions__title, .ingredients__title, .header__title {
+  font-family: "Young Serif";
+  font-weight: 400;
+}
+
+.preparation__title {
+  font-family: "Outfit";
+  font-weight: 600;
+}
+
+.instructions__list--item, .ingredients__list--item, .preparation__list, .header__description {
+  font-family: "Outfit";
+  font-weight: 400;
+}
+
+.instructions__list--item span, .instructions__list--item::marker, .preparation__list--item span {
+  font-family: "Outfit";
+  font-weight: 700;
+}
+
 /* NOTE: mixins  */
 *,
 *::after,
@@ -20,8 +40,131 @@ body {
   font-family: "Young Serif", "Outfit", sans-serif;
   line-height: 1;
   overflow-x: hidden;
-  text-align: center;
   background-color: #f3e5d7;
+}
+
+.main-container {
+  max-width: 73.6rem;
+  height: auto;
+  background-color: #fff;
+  padding: 4rem;
+  border-radius: 2.4rem;
+  margin: 12.8rem auto;
+}
+
+/* NOTE: header */
+.header {
+  margin-bottom: 3.2rem;
+}
+.header__image {
+  width: 100%;
+  height: auto;
+  border-radius: 1.2rem;
+  margin-bottom: 2.4rem;
+}
+.header__title {
+  font-size: 4rem;
+  color: #312e2c;
+  margin-bottom: 2.4rem;
+}
+.header__description {
+  font-size: 1.6rem;
+  color: #5f564d;
+  line-height: 1.5;
+}
+
+/* NOTE: preparation */
+.preparation {
+  background-color: #fff7fb;
+  padding: 2.4rem;
+  border-radius: 1.2rem;
+  margin-bottom: 3.2rem;
+}
+.preparation__title {
+  font-size: 2rem;
+  color: #7a284e;
+  margin-bottom: 1.6rem;
+}
+.preparation__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  list-style-position: inside;
+  font-size: 1.6rem;
+  color: #5f564d;
+  line-height: 1.5;
+}
+.preparation__list--item {
+  margin-left: 0.8rem;
+}
+.preparation__list--item::marker {
+  color: #7a284e;
+}
+.preparation__list--item span {
+  font-size: 1.6rem;
+  color: #5f564d;
+  line-height: 1.5;
+  margin-left: 1.6rem;
+}
+
+/* NOTE: ingredients */
+.ingredients__title {
+  font-size: 2.8rem;
+  color: #854632;
+  margin-bottom: 2.4rem;
+}
+.ingredients__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  list-style-position: inside;
+}
+.ingredients__list--item {
+  font-size: 1.6rem;
+  color: #5f564d;
+  line-height: 1.5;
+  margin-left: 0.8rem;
+}
+.ingredients__list--item::marker {
+  color: #854632;
+}
+.ingredients__list--item span {
+  margin-left: 1.6rem;
+}
+
+.horizontal-line {
+  border-top: 1px solid #e3ddd7;
+  margin: 3.2rem 0;
+}
+
+/* NOTE: instructions */
+.instructions__title {
+  font-size: 2.8rem;
+  color: #854632;
+  margin-bottom: 2.4rem;
+}
+.instructions__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  list-style-position: inside;
+}
+.instructions__list--item {
+  font-size: 1.6rem;
+  color: #5f564d;
+  line-height: 1.5;
+  margin-left: 0.8rem;
+}
+.instructions__list--item::marker {
+  font-size: 1.6rem;
+  color: #854632;
+  line-height: 1.5;
+}
+.instructions__list--item span {
+  font-size: 1.6rem;
+  color: #5f564d;
+  line-height: 1.5;
+  margin-left: 1.6rem;
 }
 
 /*# sourceMappingURL=main.css.map */
