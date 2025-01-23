@@ -23,23 +23,34 @@
     <title>Recipe page</title>
   </head>
   <body>
-    <main class="main-container">
+    <main class="main">
       <section class="header">
-        <figure>
+        <picture>
+          <source
+            srcset="./assets/images/omeletter-desktop.png"
+            type="image/png"
+            media="(min-width: 64em)"
+          />
+          <source
+            srcset="./assets/images/omelette-tablet.png"
+            type="image/png"
+            media="(min-width: 48em)"
+          />
           <img
             class="header__image"
-            src="./assets/images/image-omelette.jpeg"
-            alt="Omelette with cherry tomatoes, spinach, celery and some dipping sauce"
+            src="./assets/images/omelette-mobile.png"
+            alt="Plate of omelette wrapped into tortilla bread topped with tomatoes and spinach"
           />
-          <figcaption>
-            <h1 class="header__title">Simple Omelette Recipe</h1>
-            <p class="header__description">
-              An easy and quick dish, perfect for any meal. This classic
-              omelette combines beaten eggs cooked to perfection, optionally
-              filled with your choice of cheese, vegetables, or meats.
-            </p>
-          </figcaption>
-        </figure>
+        </picture>
+
+        <div class="header__information">
+          <h1 class="header__title">Simple Omelette Recipe</h1>
+          <p class="header__description">
+            An easy and quick dish, perfect for any meal. This classic omelette
+            combines beaten eggs cooked to perfection, optionally filled with
+            your choice of cheese, vegetables, or meats.
+          </p>
+        </div>
       </section>
       <section class="preparation">
         <h3 class="preparation__title">Preparation time</h3>
@@ -58,7 +69,7 @@
           </li>
         </ul>
       </section>
-      <article class="recipe-content">
+      <article class="recipe">
         <section class="ingredients">
           <h3 class="ingredients__title">Ingredients</h3>
           <ul class="ingredients__list">
