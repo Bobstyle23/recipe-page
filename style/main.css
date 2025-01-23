@@ -2,7 +2,7 @@
 /* NOTE: spacing */
 /* NOTE: font */
 /* NOTE: extends */
-.ingredients__title, .header__title {
+.nutrition__title, .instructions__title, .ingredients__title, .header__title {
   font-family: "Young Serif";
   font-weight: 400;
 }
@@ -12,12 +12,12 @@
   font-weight: 600;
 }
 
-.ingredients__list-item, .preparation__list-item, .header__description {
+.nutrition__table td:first-child, .nutrition__info, .instructions__steps-item, .ingredients__list-item, .preparation__list-item, .header__description {
   font-family: "Outfit";
   font-weight: 400;
 }
 
-.preparation__list-item span {
+.nutrition__table td:not(:first-child), .instructions__steps-item span, .preparation__list-item span {
   font-family: "Outfit";
   font-weight: 700;
 }
@@ -41,6 +41,12 @@ body {
   line-height: 1;
   overflow-x: hidden;
   background-color: #f3e5d7;
+}
+
+.horizontal-line {
+  height: 0.1rem;
+  border: none;
+  background-color: #e3ddd7;
 }
 
 .main {
@@ -106,7 +112,6 @@ body {
   transform: translateY(-50%);
 }
 .preparation__list-item span {
-  display: inline-block;
   font-size: 1.6rem;
   color: #5f564d;
   line-height: 1.5;
@@ -152,6 +157,80 @@ body {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.instructions {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+.instructions__title {
+  font-size: 2.8rem;
+  color: #854632;
+}
+.instructions__steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-inline-start: 2.4rem;
+}
+.instructions__steps-item {
+  font-size: 1.6rem;
+  color: #5f564d;
+  line-height: 1.5;
+  padding-inline-start: 1.6rem;
+}
+.instructions__steps-item::marker {
+  color: #854632;
+  font-weight: 700;
+}
+.instructions__steps-item span {
+  font-size: 1.6rem;
+  color: #5f564d;
+  line-height: 1.5;
+}
+
+.nutrition {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+.nutrition__title {
+  font-size: 2.8rem;
+  color: #854632;
+}
+.nutrition__info {
+  font-size: 1.6rem;
+  color: #5f564d;
+  line-height: 1.5;
+  text-wrap: balance;
+}
+.nutrition__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.nutrition__table td {
+  padding: 1.2rem 3.2rem;
+}
+.nutrition__table td:first-child {
+  font-size: 1.6rem;
+  color: #5f564d;
+  line-height: 1.5;
+  padding-right: 0;
+}
+.nutrition__table td:not(:first-child) {
+  font-size: 1.6rem;
+  color: #854632;
+  line-height: 1.5;
+}
+.nutrition__table-row:not(:last-child) {
+  border-bottom: 1px solid #e3ddd7;
+}
+.nutrition__table-row:first-child td {
+  padding-top: 0;
+}
+.nutrition__table-row:last-child td {
+  padding-bottom: 0;
 }
 
 /*# sourceMappingURL=main.css.map */

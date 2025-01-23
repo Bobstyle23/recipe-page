@@ -101,6 +101,12 @@ body {
   background-color: $color-stone-100;
 }
 
+.horizontal-line {
+  height: 0.1rem;
+  border: none;
+  background-color: $color-stone-150;
+}
+
 .main {
   background-color: #fff;
 }
@@ -166,7 +172,6 @@ body {
       }
 
       span {
-        display: inline-block;
         @include text-preset-4-bold($color-stone-600);
       }
     }
@@ -212,6 +217,84 @@ body {
         left: 0;
         top: 50%;
         transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+.instructions {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+
+  &__title {
+    @include text-preset-2($color-brown-800);
+  }
+
+  &__steps {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-8;
+    margin-inline-start: $spacing-24;
+
+    &-item {
+      @include text-preset-4($color-stone-600);
+      padding-inline-start: $spacing-16;
+
+      &::marker {
+        color: $color-brown-800;
+        font-weight: 700;
+      }
+
+      span {
+        @include text-preset-4-bold($color-stone-600);
+      }
+    }
+  }
+}
+
+.nutrition {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-24;
+
+  &__title {
+    @include text-preset-2($color-brown-800);
+  }
+
+  &__info {
+    @include text-preset-4($color-stone-600);
+    text-wrap: balance;
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+
+    td {
+      padding: $spacing-12 $spacing-32;
+
+      &:first-child {
+        @include text-preset-4($color-stone-600);
+        padding-right: 0;
+      }
+
+      &:not(:first-child) {
+        @include text-preset-4-bold($color-brown-800);
+      }
+    }
+
+    &-row {
+      &:not(:last-child) {
+        border-bottom: 1px solid $color-stone-150;
+      }
+
+      &:first-child td {
+        padding-top: 0;
+      }
+
+      &:last-child td {
+        padding-bottom: 0;
       }
     }
   }
