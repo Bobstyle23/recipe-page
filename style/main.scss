@@ -272,30 +272,64 @@ body {
     border-collapse: collapse;
 
     td {
-      padding: $spacing-12 $spacing-32;
-
       &:first-child {
         @include text-preset-4($color-stone-600);
-        padding-right: 0;
       }
 
       &:not(:first-child) {
         @include text-preset-4-bold($color-brown-800);
+        padding-left: $spacing-16;
       }
     }
 
     &-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding: $spacing-12 $spacing-32;
+
       &:not(:last-child) {
         border-bottom: 1px solid $color-stone-150;
       }
 
-      &:first-child td {
+      &:first-child {
         padding-top: 0;
       }
 
-      &:last-child td {
+      &:last-child {
         padding-bottom: 0;
       }
+    }
+  }
+}
+
+@media (min-width: 48em) {
+  .main {
+    margin: $spacing-128 7.6rem;
+    padding: $spacing-40;
+    border-radius: $spacing-24;
+  }
+
+  .header {
+    &__title {
+      font-size: 4rem;
+    }
+
+    &__information {
+      padding: $spacing-40 0 $spacing-32;
+    }
+  }
+
+  .preparation {
+    margin: 0 0 $spacing-32;
+  }
+
+  .recipe {
+    padding: 0;
+  }
+
+  .nutrition {
+    &__info {
+      text-wrap: unset;
     }
   }
 }

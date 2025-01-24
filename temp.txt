@@ -67,7 +67,7 @@
 /* } */
 /**/
 /* /* NOTE: ingredients */ */
-/* .ingredients { */
+/* .ingredients { */ 
 /*   &__title { */
 /*     @include text-preset-2($color-brown-800); */
 /*     margin-bottom: $spacing-300; */

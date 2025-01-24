@@ -209,28 +209,53 @@ body {
   width: 100%;
   border-collapse: collapse;
 }
-.nutrition__table td {
-  padding: 1.2rem 3.2rem;
-}
 .nutrition__table td:first-child {
   font-size: 1.6rem;
   color: #5f564d;
   line-height: 1.5;
-  padding-right: 0;
 }
 .nutrition__table td:not(:first-child) {
   font-size: 1.6rem;
   color: #854632;
   line-height: 1.5;
+  padding-left: 1.6rem;
+}
+.nutrition__table-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 1.2rem 3.2rem;
 }
 .nutrition__table-row:not(:last-child) {
   border-bottom: 1px solid #e3ddd7;
 }
-.nutrition__table-row:first-child td {
+.nutrition__table-row:first-child {
   padding-top: 0;
 }
-.nutrition__table-row:last-child td {
+.nutrition__table-row:last-child {
   padding-bottom: 0;
+}
+
+@media (min-width: 48em) {
+  .main {
+    margin: 12.8rem 7.6rem;
+    padding: 4rem;
+    border-radius: 2.4rem;
+  }
+  .header__title {
+    font-size: 4rem;
+  }
+  .header__information {
+    padding: 4rem 0 3.2rem;
+  }
+  .preparation {
+    margin: 0 0 3.2rem;
+  }
+  .recipe {
+    padding: 0;
+  }
+  .nutrition__info {
+    text-wrap: unset;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
