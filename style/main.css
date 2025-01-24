@@ -257,5 +257,11 @@ body {
     text-wrap: unset;
   }
 }
+@media (min-width: 64em) {
+  .main {
+    max-width: 73.6rem;
+    margin: 12.8rem auto;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */

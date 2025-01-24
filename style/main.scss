@@ -333,3 +333,10 @@ body {
     }
   }
 }
+
+@media (min-width: 64em) {
+  .main {
+    max-width: 73.6rem;
+    margin: $spacing-128 auto;
+  }
+}
