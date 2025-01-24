@@ -81,6 +81,38 @@ $font-size-xs: 1.2rem;
   @extend %font-outfit-bold;
 }
 
+@mixin flexbox($gap) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
+
+@mixin marker-item($span: false) {
+  &-item {
+    @include text-preset-4($color-stone-600);
+    padding-inline-start: $spacing-32;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0.4rem;
+      height: 0.4rem;
+      border-radius: 50%;
+      background-color: $color-brown-800;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    @if $span == true {
+      span {
+        @include text-preset-4-bold($color-stone-600);
+      }
+    }
+  }
+}
+
 *,
 *::after,
 *::before {
@@ -113,9 +145,7 @@ body {
 
 .header {
   &__information {
-    display: flex;
-    flex-direction: column;
-    gap: $spacing-24;
+    @include flexbox($spacing-24);
     padding: $spacing-40 $spacing-32 $spacing-32;
   }
 
@@ -146,95 +176,46 @@ body {
   }
 
   &__list {
-    display: flex;
-    flex-direction: column;
-    gap: $spacing-8;
+    @include flexbox($spacing-8);
+    @include marker-item(true);
+
     justify-content: center;
     margin-inline-start: $spacing-8;
 
     list-style: none;
-
-    &-item {
-      @include text-preset-4($color-stone-600);
-      padding-inline-start: $spacing-32;
-      position: relative;
-
-      &::before {
-        content: "";
-        position: absolute;
-        width: 0.4rem;
-        height: 0.4rem;
-        border-radius: 50%;
-        background-color: $color-brown-800;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-
-      span {
-        @include text-preset-4-bold($color-stone-600);
-      }
-    }
   }
 }
 
 .recipe {
-  display: flex;
-  flex-direction: column;
-  gap: $spacing-32;
+  @include flexbox($spacing-32);
   padding: 0 $spacing-32 $spacing-40;
 }
 
 .ingredients {
-  display: flex;
-  flex-direction: column;
-  gap: $spacing-24;
+  @include flexbox($spacing-24);
 
   &__title {
     @include text-preset-2($color-brown-800);
   }
 
   &__list {
-    display: flex;
-    flex-direction: column;
-    gap: $spacing-8;
+    @include flexbox($spacing-8);
+    @include marker-item;
+
     margin-inline-start: $spacing-8;
     list-style: none;
-
-    &-item {
-      @include text-preset-4($color-stone-600);
-      padding-inline-start: $spacing-32;
-
-      position: relative;
-
-      &::before {
-        content: "";
-        position: absolute;
-        width: 0.4rem;
-        height: 0.4rem;
-        border-radius: 50%;
-        background-color: $color-brown-800;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-    }
   }
 }
 
 .instructions {
-  display: flex;
-  flex-direction: column;
-  gap: 2.4rem;
+  @include flexbox($spacing-24);
 
   &__title {
     @include text-preset-2($color-brown-800);
   }
 
   &__steps {
-    display: flex;
-    flex-direction: column;
-    gap: $spacing-8;
+    @include flexbox($spacing-8);
     margin-inline-start: $spacing-24;
 
     &-item {
@@ -254,9 +235,7 @@ body {
 }
 
 .nutrition {
-  display: flex;
-  flex-direction: column;
-  gap: $spacing-24;
+  @include flexbox($spacing-24);
 
   &__title {
     @include text-preset-2($color-brown-800);
